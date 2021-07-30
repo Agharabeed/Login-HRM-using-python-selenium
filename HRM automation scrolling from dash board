@@ -1,0 +1,20 @@
+from selenium import webdriver
+
+driver = webdriver.Chrome(executable_path="E:\Agha\Driver\chromedriver.exe")
+driver.maximize_window()
+driver.get("http://hrm.5stardesigners.net/symfony/web/index.php/auth/login")
+driver.set_page_load_timeout(20)
+driver.find_element_by_id("txtUsername").send_keys("Agha Rabeed")
+driver.find_element_by_id("txtPassword").send_keys("AGHA@123r")
+driver.find_element_by_id("btnLogin").click()
+driver.find_element_by_link_text("Time").click()
+driver.find_element_by_link_text("Attendance").click()
+driver.find_element_by_link_text("Punch In/Out").click()
+driver.find_element_by_id("btnPunch").click()
+driver.implicitly_wait(20)
+driver.find_element_by_id("welcome").click()
+driver.find_element_by_tag_name("a").click()
+driver.implicitly_wait(20)
+driver.quit()
+
+
