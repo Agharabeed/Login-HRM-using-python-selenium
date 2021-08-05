@@ -1,0 +1,30 @@
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+
+
+
+driver = webdriver.Chrome(executable_path="E:\Agha\Driver\chromedriver.exe")
+driver.maximize_window()
+driver.get("http://www.google.com")
+driver.find_element_by_name("q").send_keys("Automation Demo Site")
+driver.implicitly_wait(10)
+
+driver.find_element_by_name("btnK").click()
+driver.implicitly_wait(10)
+driver.find_element_by_tag_name("cite").click()
+driver.implicitly_wait(10)
+driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(1) > div:nth-child(2) > input").send_keys("Cherry")
+
+driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(1) > div:nth-child(3) > input").send_keys("Austin")
+
+driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(2) > div > textarea").send_keys("Street:1404 Whitetail Lane , City:Dallas , State/Province abbr: TX, State/Province full : Texas, Postal code : 75207")
+
+driver.find_element_by_css_selector("#eid > input").send_keys("Cherry@yopmail.com")
+
+driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(4) > div > input").send_keys("4695076230")
+
+driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(5) > div > label:nth-child(1) > input").click()
+
+driver.find_element_by_css_selector("#checkbox2").click()
+
+driver.find_element_by_css_selector("#msdd").click()
