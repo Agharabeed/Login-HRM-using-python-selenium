@@ -5,6 +5,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 driver = webdriver.Chrome(executable_path="E:\Agha\Driver\chromedriver.exe")
 driver.maximize_window()
+
+
 driver.get("http://www.google.com")
 driver.find_element_by_name("q").send_keys("Automation Demo Site")
 driver.implicitly_wait(10)
@@ -28,3 +30,60 @@ driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(5) > di
 driver.find_element_by_css_selector("#checkbox2").click()
 
 driver.find_element_by_css_selector("#msdd").click()
+
+driver.find_element_by_link_text("Urdu").click()
+
+driver.find_element_by_link_text("English").click()
+driver.implicitly_wait(20)
+
+driver.find_element_by_css_selector("#section > div").click()
+
+driver.find_element_by_css_selector("#Skills").click()
+driver.find_element_by_css_selector("#Skills > option:nth-child(4)").click()
+
+driver.find_element_by_css_selector("#countries").click()
+driver.find_element_by_css_selector("#countries > option:nth-child(171)").click()
+
+driver.find_element_by_xpath("//*[@id='countries']").click
+driver.find_element_by_css_selector("#countries > option:nth-child(171)").click()
+driver.find_element_by_css_selector("#countries").click()
+
+driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(10) > div > span > span.selection > span").click()
+driver.find_element_by_xpath("/html/body/span/span/span[1]/input").send_keys("United States of America")
+
+
+driver.find_element_by_xpath("//*[@id='select2-country-results']").click()
+
+
+driver.find_element_by_css_selector("#yearbox").click
+driver.find_element_by_css_selector("#yearbox > option:nth-child(81)").click()
+driver.find_element_by_css_selector("#yearbox").click
+
+
+driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(11) > div:nth-child(3) > select").click()
+driver.find_element_by_xpath("//*[@id='basicBootstrapForm']/div[11]/div[2]/select/option[12]").click()
+driver.find_element_by_css_selector("#basicBootstrapForm > div:nth-child(11) > div:nth-child(3) > select").click()
+
+
+driver.find_element_by_css_selector("#daybox").click()
+driver.find_element_by_xpath("//*[@id='daybox']/option[6]").click()
+driver.find_element_by_css_selector("#daybox").click()
+
+
+
+driver.find_element_by_css_selector("#firstpassword").click()
+driver.find_element_by_css_selector("#firstpassword").send_keys("P@ssw0rd")
+driver.find_element_by_css_selector("#firstpassword").click()
+
+
+driver.find_element_by_css_selector("#secondpassword").click()
+driver.find_element_by_css_selector("#secondpassword").send_keys("P@ssw0rd")
+driver.find_element_by_css_selector("#secondpassword").click()
+
+driver.find_element_by_xpath("//*[@id='imagesrc']").send_keys("E://Agha5/apple.png")
+
+driver.find_element_by_css_selector("#submitbtn").click()
+
+driver.implicitly_wait(500)
+driver.find_element_by_xpath("//*[@id='Button1']").click()
+
