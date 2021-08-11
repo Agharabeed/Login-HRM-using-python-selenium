@@ -1,0 +1,27 @@
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+
+
+
+driver = webdriver.Chrome(executable_path="E:\Agha\Driver\chromedriver.exe")
+driver.maximize_window()
+
+
+driver.get("http://www.google.com")
+driver.find_element_by_name("q").send_keys("Automation Demo Site")
+driver.implicitly_wait(10)
+
+driver.find_element_by_name("btnK").click()
+driver.implicitly_wait(10)
+driver.find_element_by_tag_name("cite").click()
+driver.implicitly_wait(10)
+
+
+driver.find_element_by_css_selector("#header > nav > div > div.navbar-collapse.collapse.navbar-right > ul > li:nth-child(1) > a").click()
+driver.implicitly_wait(10)
+driver.get("http://demo.automationtesting.in/Register.html")
+driver.find_element_by_css_selector("#header > nav > div > div.navbar-collapse.collapse.navbar-right > ul > li:nth-child(1) > a").click()
+driver.find_element_by_css_selector("#email").click()
+driver.find_element_by_css_selector("#email").send_keys("Cherryaustin@yopmail.com")
+driver.find_element_by_css_selector("#enterimg").click()
+driver.implicitly_wait(100)
